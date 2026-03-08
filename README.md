@@ -3,10 +3,6 @@
 [![Data: Roboflow](https://img.shields.io/badge/Dataset-Roboflow-6706CE?style=for-the-badge&logo=roboflow)](https://roboflow.com)
 [![Accuracy: 97.5%](https://img.shields.io/badge/mAP50-97.5%25-green?style=for-the-badge)](https://github.com/yourusername)
 
-<p align="center">
-  <img src="https://capsule-render.vercel.app/render?type=soft&color=auto&height=200&section=header&text=Smart%20Weed%20Detection&fontSize=60&animation=fadeIn" />
-</p>
-
 ---
 
 ## ⚡ Project Overview
