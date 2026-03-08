@@ -1,50 +1,56 @@
-# 🌿 SmartAg: Automated Weed Detection 
-[![YOLOv8](https://img.shields.io/badge/Model-YOLOv8-00FFAA?style=for-the-badge&logo=ultralytics)](https://github.com/ultralytics/ultralytics)
-[![Roboflow](https://img.shields.io/badge/Data-Roboflow-6706CE?style=for-the-badge&logo=roboflow)](https://roboflow.com)
-[![Python](https://img.shields.io/badge/Python-3.10+-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
+# 🌿 Automated Weed Detection for Precision Agriculture
+[![Model: YOLOv8](https://img.shields.io/badge/Model-YOLOv8n-00FFAA?style=for-the-badge&logo=ultralytics)](https://github.com/ultralytics/ultralytics)
+[![Data: Roboflow](https://img.shields.io/badge/Dataset-Roboflow-6706CE?style=for-the-badge&logo=roboflow)](https://roboflow.com)
+[![Accuracy: 97.5%](https://img.shields.io/badge/mAP50-97.5%25-green?style=for-the-badge)](https://github.com/yourusername)
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/ultralytics/assets/main/yolov8/banner-yolov8.png" width="800" alt="YOLOv8 Banner">
+  <img src="https://capsule-render.vercel.app/render?type=soft&color=auto&height=200&section=header&text=Smart%20Weed%20Detection&fontSize=60&animation=fadeIn" />
 </p>
 
 ---
 
-## ⚡ Quick Vision
-This project leverages the power of **Computer Vision** to automate the identification of weeds in agricultural fields. By utilizing a custom-trained **YOLOv8** architecture, we provide a high-speed, high-accuracy solution to help farmers optimize herbicide use and improve crop yields.
+## ⚡ Project Overview
+This project implements a high-performance **YOLOv8-based** computer vision model designed to detect weeds in agricultural fields. Trained on data sourced from **Roboflow**, the model is optimized for both accuracy and speed, making it suitable for real-time deployment on autonomous farming equipment.
 
-### 🎯 Features
-- 🚀 **Real-time Inference:** Optimized for edge deployment.
-- 📊 **Precision Agriculture:** High mAP scores on weed-specific datasets.
-- 🔄 **Augmented Training:** Robust against lighting and soil variations.
+### ✨ Key Highlights
+- **Target:** Distinguishing between crops and invasive weed species.
+- **Efficiency:** Ultra-lightweight (5.96 MB) for edge device compatibility.
+- **Robustness:** Trained with Blur, CLAHE, and MedianBlur augmentations to handle varying field conditions.
 
 ---
 
-## 🛠️ Tech Stack & Tools
-<div align="left">
-  <img src="https://img.shields.io/badge/PyTorch-%23EE4C2C.svg?style=flat-square&logo=PyTorch&logoColor=white" />
-  <img src="https://img.shields.io/badge/OpenCV-%235C3EE8.svg?style=flat-square&logo=OpenCV&logoColor=white" />
-  <img src="https://img.shields.io/badge/Pandas-%23150458.svg?style=flat-square&logo=pandas&logoColor=white" />
-  <img src="https://img.shields.io/badge/Google%20Colab-%23F9AB00.svg?style=flat-square&logo=googlecolab&logoColor=white" />
+## 📊 Performance Benchmarks
+The **YOLOv8n** model achieved exceptional results during evaluation:
+
+| Metric | Score | Description |
+| :--- | :--- | :--- |
+| **mAP50** 🏆 | `0.9757` | Mean Average Precision at 0.5 IoU |
+| **Precision** 🎯 | `0.9362` | Ability to avoid false positives |
+| **Recall** 🔍 | `0.9597` | Ability to find all relevant objects |
+| **Inference** ⚡ | `4.86 ms` | Processing speed per image |
+| **Model Size** 📦 | `5.96 MB` | Final weights file size |
+
+---
+
+
+
+## 🛠️ Tech Stack
+<div align="center">
+  <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" />
+  <img src="https://img.shields.io/badge/PyTorch-EE4C2C?style=for-the-badge&logo=pytorch&logoColor=white" />
+  <img src="https://img.shields.io/badge/Ultralytics-00FFAA?style=for-the-badge&logo=github&logoColor=black" />
+  <img src="https://img.shields.io/badge/OpenCV-5C3EE8?style=for-the-badge&logo=opencv&logoColor=white" />
 </div>
 
 ---
 
-## 📈 Performance Dashboard
-We compared the **Nano** and **Small** versions of YOLOv8. Here’s how they stacked up:
+## 🚀 Pipeline Workflow
 
-| Model | mAP50 🏆 | Precision 🎯 | Recall 🔍 | Latency ⚡ |
-| :--- | :---: | :---: | :---: | :---: |
-| **YOLOv8n** | `0.945` | `0.898` | `0.899` | **1.1ms** |
-| **YOLOv8s** | `0.948` | `0.916` | `0.887` | **2.5ms** |
-
----
-
-## 🚀 Getting Started
-
-### 1. Installation
-```bash
-# Clone the repository
-git clone [https://github.com/yourusername/weed-detection.git](https://github.com/yourusername/weed-detection.git)
-
-# Install dependencies
-pip install ultralytics opencv-python pandas
+```mermaid
+graph LR
+    A[Field Images] --> B{Roboflow}
+    B --> C[Augmentation]
+    C --> D[YOLOv8 Training]
+    D --> E[Validation]
+    E --> F[Inference Deployment]
+    style F fill:#00FFAA,stroke:#333,stroke-width:2px
